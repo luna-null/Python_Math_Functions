@@ -43,7 +43,10 @@ def charEqInit(y1func, y2func, y_t0Func, dy_t0Func, y_t0Eval, dy_t0Eval):
 
 def main():
     pVar, qVar, initCond = inputVariables()
-    if initCond:
+    if initCond:    
+        # If the initial condition is irrational, 
+        # it's better to put it into calc.py on its own.
+        # I haven't created a way to sort irrational numbers yet
         y_t, dy_dt, y_t0, dy_t0_dt = calc.charEqCalc(pVar, qVar, initCond)
         # charEqInit(y1func, y2func, y_t0Func, dy_t0Func, y_t0Eval, dy_t0Eval)
         print("",
